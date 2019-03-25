@@ -1,0 +1,53 @@
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<title></title>
+	<style type="text/css">
+	.wrapper{
+		width:186px;
+		height:65px;
+		border: solid 2px rgb(255, 14, 59);		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		margin:300px auto;
+		 overflow: hidden;
+		transition: all 200ms ease;
+		
+	}
+	.button{
+		text-decoration: none;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 600;
+		z-index: 1000;
+		font-size: 14px;
+		color: rgba(255,255,255,1);
+		transition: all 400ms ease;
+	}
+	.wrapper::before{
+		display: block;
+		content: '';
+		width:130%;
+		height:320%;
+		background-color: red;
+		position: absolute;
+		z-index: 0;
+		transform: rotate(-45deg);
+		-webkit-transform-origin: center center;
+		transition: all 600ms ease;
+	}
+	.wrapper:hover::before{
+		transform: translate(55%, 55%) rotate(-45deg);
+	}
+	.wrapper:hover .button{
+		color:rgb(255, 14, 59);
+	}
+	</style>
+</head>
+<body>
+	<div class = "wrapper">
+		<a class = 'button' href = '#'>READ MORE</a>
+	</div>
+</body>
+</html>
